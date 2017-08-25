@@ -16,12 +16,12 @@
 
 // Create the Factory class bellow:
 class Factory {
-  constructor(make = 'Mazda',location = 'USA', airbags = true, abs = true, warranty = '60,000 miles / 3 years'){
+  constructor(make = 'Mazda',location = 'USA', airbags = true, abs = true, warranty ){
     this.make=make
     this.location=location
     this.airbags=airbags
     this.abs=abs
-    this.warranty=warranty
+    this.warranty= '60,000 miles / 3 years'
   }
   massBuild (quantity,options){
     return `Building ${quantity} ${this.color} ${this.trim} ${this.model}`
@@ -41,8 +41,8 @@ class Factory {
 // Write your code below:
 
 class Car extends Factory {
-  constructor(model, doors, enginetype, color, transmission, trim, wheelstrim, seatstrim, audio, moonroof, enginesize = 4, navigation = true, backupcamera= true, warranty){
-    super(warranty)
+  constructor(model, doors, enginetype, color, transmission, trim, wheelstrim, seatstrim, audio, moonroof, enginesize = 4, navigation = true, backupcamera= true){
+    super()
     this.model = model
     this.doors = doors
     this.color = color
@@ -89,7 +89,7 @@ class Sport extends Car {
 
 class Truck extends Factory {
   constructor(model, color, trim, enginesize, hitch, bed, navigation, backupcamera, audio, warranty){
-    super(warranty)
+    super()
     this.model = model
     this.color = color
     this.trim = trim
